@@ -1,7 +1,7 @@
 <div align="center">
   <br/>
   <br/>
-  <img src="https://cdn.jsdelivr.net/gh/DikDns/spotifier-chrome-extension@main/src/icons/icon-256.png" alt="SPOTifier Logo" width="128" height="128"/>
+  <img src="https://raw.githubusercontent.com/DikDns/spotifier-chrome-extension/refs/heads/main/src/icons/icon-256.png" alt="SPOTifier Logo" width="128" height="128"/>
   <h3>SPOTifier for Chrome Extension</h3>
   <p>This is the source code of the SPOTifier for Chrome Extension.</p>
   <br/>
