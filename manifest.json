@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "SPOTifier Extension",
-  "version": "1.0",
-  "description": "Sistem Pembelajaran Online Terpadu, but better :)",
+  "version": "0.1",
+  "description": "SPOTifier takes SPOT to the modern era.",
   "permissions": ["cookies", "activeTab", "scripting", "storage"],
   "externally_connectable": {
     "matches": [
@@ -24,18 +24,29 @@
         "*://*.spotifier-upi.vercel.app/*",
         "*://localhost:*/*"
       ],
-      "js": ["content.js"],
+      "js": ["/src/content.js"],
       "run_at": "document_idle"
     }
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "/src/background.js"
   },
   "action": {
-    "default_popup": "popup.html"
+    "default_title": "SPOTifier",
+    "default_popup": "/src/popup.html",
+    "default_icon": {
+      "24": "/src/icons/icon-24.png",
+      "48": "/src/icons/icon-48.png",
+      "128": "/src/icons/icon-128.png",
+      "256": "/src/icons/icon-256.png",
+      "512": "/src/icons/icon-512.png"
+    }
   },
   "icons": {
-    "48": "icons/icon.png",
-    "128": "icons/icon.png"
+    "24": "/src/icons/icon-24.png",
+    "48": "/src/icons/icon-48.png",
+    "128": "/src/icons/icon-128.png",
+    "256": "/src/icons/icon-256.png",
+    "512": "/src/icons/icon-512.png"
   }
 }

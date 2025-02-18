@@ -5,6 +5,7 @@ const COOKIE_DOMAIN = ".spot.upi.edu";
 const PROD_URL = "https://spotifier-upi.vercel.app";
 const DEV_URL = "http://localhost:3000";
 const SSO_PATH = "/api/sso";
+const EXTENSIONS_TYPE = "Chrome";
 
 // Styles
 const styles = {
@@ -259,7 +260,7 @@ function injectVersionInfo() {
   if (versionElement) {
     versionElement.innerHTML = `
       <div class="flex items-center gap-3 rounded-full border border-green-200/20 bg-green-500/10 px-4 py-2 text-green-500">
-        <span class="font-medium">Installed Version ${version}</span>
+        <span class="font-medium">Installed ${EXTENSIONS_TYPE} Version ${version}</span>
       </div>
     `;
   }
@@ -282,8 +283,6 @@ function initialize() {
   });
 }
 
-window.addEventListener("load", initialize);
-
 // Listen for theme changes
 chrome.storage.onChanged.addListener(function (changes, namespace) {
   if (namespace === "sync" && changes.darkMode) {
@@ -302,4 +301,5 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
   }
 });
 
+initialize();
 console.log("content.js from spotifier has been loaded");
