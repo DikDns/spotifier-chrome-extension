@@ -76,7 +76,7 @@ The extension supports several configuration options through the popup interface
 ### Building
 
 1. Make your changes
-2. Test locally using Firefox's debugging tools
+2. Test locally using Chrome's debugging tools
 3. Package the extension:
 
 ```bash
